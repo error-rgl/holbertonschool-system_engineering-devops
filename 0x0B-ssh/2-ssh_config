@@ -1,0 +1,4 @@
+# SSH client configuration for can connect to a 
+# server without typing a password.
+IdentityFile ~/.ssh/school
+PasswordAuthentication no
