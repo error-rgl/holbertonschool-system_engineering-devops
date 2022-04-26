@@ -4,6 +4,7 @@
 
 sudo apt update
 sudo apt-get install nginx -y
+sudo chown -R ubuntu /var/www/
 sudo echo "Hello World" |sudo tee /var/www/html/index.nginx-debian.html
 sudo echo "Ceci n'est pas une page" |sudo tee /var/www/html/error-404.html
 sudo service nginx start
