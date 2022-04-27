@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+## Linux update and upgrade
+sudo apt update && sudo apt upgrade -y
+## need to enable a dedicated PPA with the following command
+sudo apt-get install -y --no-install-recommends software-properties-common
+sudo add-apt-repository ppa:vbernat/haproxy-2.4 -y
+##  Install Haproxy
+sudo apt install haproxy -y
+## Initialization the services haproxy
+sudo service haproxy start
+## Adding lines in haproxy.cfg
+sed -i "$ a frontend Frontend\n\tbind *:80\n\tmode http\n\tdefault_backend Backend\nbackend Backend\n\tbalance roundrobin\n\tserver 3377-web-01 34.74.254.2:80 check\n\tserver 3377-web-02 52.207.225.1:80 check" /etc/haproxy/haproxy.cfg
+## Restart services haproxy
+sudo service haproxy restart
+## Linux update && upgrade
+sudo apt update && sudo apt upgrade -y
