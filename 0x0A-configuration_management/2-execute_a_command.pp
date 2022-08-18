@@ -1,4 +1,4 @@
-# Kills a process name killmenow
+# Kills a process name killmenow .
 
 exec { 'pkill killmenow':
   path     => '/usr/bin',
