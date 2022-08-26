@@ -13,7 +13,7 @@ The files contained in this repository are:
 | -------- | ----------- |
 | `0-nginx_likes_port_80` | script that sets the port 80 on a Nginx server |
 | `1-debugging_made_short` | script short that sets the port 80 |
-| `README.md` | contains the desc of the files in this repository |
+| `README.md` | contains the desc. of the files in this repository |
 
 <h6 align ="rigth">
 <img src="https://tenor.com/view/aesthetic-gif-23457392.gif" height="8%" width="20%">
