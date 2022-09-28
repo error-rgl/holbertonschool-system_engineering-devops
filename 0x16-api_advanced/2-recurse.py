@@ -17,6 +17,7 @@ def add_item(hot_posts, hot_list):
     hot_posts.pop(0)
     add_item(hot_list, hot_posts)
 
+
 def recurse(subreddit, hot_list=[], after=''):
     """
     Queries to Reddit API
@@ -31,7 +32,10 @@ def recurse(subreddit, hot_list=[], after=''):
         'after': after
     }
 
-    resp = requests.get(URL, headers=headers, params=params, allow_redirects=False)
+    resp = requests.get(URL,
+                        headers=headers,
+                        params=params,
+                        allow_redirects=False)
     if resp.status_code != 200:
         return None
 
