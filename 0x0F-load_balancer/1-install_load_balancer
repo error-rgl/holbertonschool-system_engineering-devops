@@ -9,7 +9,7 @@ sudo apt install haproxy -y
 ## Initialization the services haproxy
 sudo service haproxy start
 ## Adding lines in haproxy.cfg
-sed -i "$ a frontend Frontend\n\tbind *:80\n\tmode http\n\tdefault_backend Backend\nbackend Backend\n\tbalance roundrobin\n\tserver 3701-web-01 3.88.156.100 check\n\tserver 3701-web-02 54.91.223.155 check" /etc/haproxy/haproxy.cfg
+sed -i "$ a frontend Frontend\n\tbind *:80\n\tmode http\n\tdefault_backend Backend\nbackend Backend\n\tbalance roundrobin\n\tserver 3701-web-01 3.88.156.100:80 check\n\tserver 3701-web-02 54.91.223.155:80 check" /etc/haproxy/haproxy.cfg
 ## Restart services haproxy
 sudo service haproxy restart
 ## Linux update && upgrade
